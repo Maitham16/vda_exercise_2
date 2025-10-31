@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    background-color: #f4f6fb;
+    color: #2f2f2f;
+}
+
+#container {
+    max-width: 1080px;
+    margin: 40px auto;
+    padding: 32px 36px 42px;
+    background-color: #ffffff;
+    border-radius: 16px;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: #20324d;
+}
+
+.wrapper {
+    position: relative;
+    display: grid;
+    gap: 18px;
+}
+
+svg {
+    width: 100%;
+    display: block;
+    background: #edecec88;
+    border-radius: 20px;
+    overflow: visible;
+}
+
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    margin-top: 18px;
+    font-size: 0.95rem;
+    color: #536179;
+}
+
+.lSwitch {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    display: inline-block;
+    border: 1px solid rgba(32, 50, 77, 0.24);
+}
+
+.lSwitch.highlight {
+    background: #f8863a;
+}
+
+.lSwitch.muted {
+    background: #c4ccd9;
+}
+
+.lText {
+    margin-right: 12px;
+}
+
+.country-line {
+    fill: none;
+    stroke: #b7c1d3;
+    stroke-width: 1.4px;
+    opacity: 0.45;
+    transition: stroke 160ms ease, stroke-width 160ms ease, opacity 160ms ease;
+}
+
+.country-line.highlighted {
+    stroke-width: 2.6px;
+    opacity: 1;
+    stroke: #f8863a;
+}
+
+.context-line {
+    opacity: 0.22;
+    stroke-width: 1px;
+}
+
+.country-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-anchor: start - 6px;
+    fill: #20324d;
+}
+
+.axis path,
+.axis line {
+    stroke: rgba(120, 134, 161, 0.45);
+}
+
+.axis text {
+    fill: #44516f;
+    font-size: 14px; 
+}
+
+.axis-title {
+    font-size: 1rem;
+    font-weight: 500;
+    fill: #20324d;
+}
+
+.grid-lines line {
+    stroke: rgb(89, 70, 2);
+    stroke-dasharray: 2 2;
+    stroke-width: 2px;
+    opacity: 0.5;
+}
+
+.brush .selection {
+    fill: rgba(239, 71, 111, 0.12);
+    stroke: rgba(239, 177, 71, 0.5);
+}
+
+@media (max-width: 720px) {
+    #container {
+        margin: 24px;
+        padding: 24px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+}

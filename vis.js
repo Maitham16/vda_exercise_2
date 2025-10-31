@@ -185,6 +185,18 @@ d3.csv("data.csv", d3.autoType).then((raw) => {
 
   rndX();
 
+  // add a year axis to the brushable chart for orientation
+  ctG
+    .append("g")
+    .attr("class", "axis axis--x axis--context")
+    .attr("transform", `translate(0, ${dm.ct.height})`)
+    .call(
+      d3
+        .axisBottom(xC)
+        .tickValues(yrTks(xC.domain()))
+        .tickFormat((d) => d3.format("d")(d))
+    );
+
   // main chart axis titles [mark]
   fcSvg
     .append("text")
